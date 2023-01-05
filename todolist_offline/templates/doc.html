@@ -1,0 +1,142 @@
+{%  load static %}
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Documentation </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/global.css">
+    <link rel="stylesheet" href="../static/css/doc.css">
+    <link rel="author" href="humans.txt">
+  </head>
+  <body>
+  <div class="doc__bg"></div>
+    <nav class="header">
+      <h1 class="logo">TodoListApp <span class="logo__thin">Documentation</span></h1>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+        <li class="menu__item"><a href="{% url 'index' %}" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <aside class="doc__nav">
+        <ul>
+          <li class="js-btn selected">Get Started</li>
+          <li class="js-btn">Run Application</li>
+          <li class="js-btn">Creating Admin</li>
+          <li class="js-btn">Admin Page</li>
+        </ul>
+      </aside>
+      <article class="doc__content">
+        <section class="js-section">
+          <h3 class="section__title">Get Started</h3>
+          <p>This is the recommended way to install Django.</p>
+            <br>
+
+            <p>Install pip. The easiest is to use the standalone pip installer. If your distribution already has pip installed, you might need to update it if it’s outdated. If it’s outdated, you’ll know because installation won’t work.</p>
+          <br>
+            Take a look at venv. This tool provides isolated Python environments, which are more practical than installing packages systemwide.
+
+          <p> It also allows installing packages without administrator privileges. The contributing tutorial walks through how to create a virtual environment. </p>
+            <br>
+          <p> After you’ve created and activated a virtual environment, enter the command:</p>
+          <h3 class="section__title">Installation</h3>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $ python -m pip install Django
+              </code>
+            </pre>
+          </div>
+        </section>
+        <p>After Installing Django To your Machine Sucesfully Go To the Next Step </p>
+        <section class="js-section">
+          <h3 class="section__title">Running Application</h3>
+          <p>To Run Programm Work,Download All Files and Folder and change direction to that folder through cmd and run code below</p>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $ python manage.py runserver
+              </code>
+            </pre>
+          </div>
+          <p></p>
+          <hr />
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Creating an admin user</h3>
+          <p>First we’ll need to create a user who can login to the admin site. Run the following command:</p>
+          <p>It will Creates User in database which will be superuser,who will control whole website</p>
+          <hr />
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $ python manage.py createsuperuser
+              </code>
+            </pre>
+          </div>
+          <p>Enter your desired username and press enter.</p>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Username: admin
+              </code>
+            </pre>
+          </div>
+          <p>You will then be prompted for your desired email address:</p>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Email address: admin@example.com
+              </code>
+            </pre>
+          </div>
+          <p>The final step is to enter your password. You will be asked to enter your password twice, the second time as a confirmation of the first.</p>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                  Password: **********
+                  Password (again): *********
+                  Superuser created successfully.
+              </code>
+            </pre>
+          </div>
+        </section>
+
+        <section class="js-section">
+          <h3 class="section__title">Start the development server</h3>
+          <p>The Django admin site is activated by default. Let’s start the development server and explore it..</p>
+          <p>.If the server is not running start it like so:</p>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                  $ python manage.py runserver
+              </code>
+            </pre>
+          </div>
+          <p>Now, open a web browser and go to “/admin/” on your local domain – e.g., http://127.0.0.1:8000/admin/. You should see the admin’s login screen:</p>
+          <img src="https://docs.djangoproject.com/en/4.1/_images/admin01.png" alt="django">
+          <p>Since translation is turned on by default, if you set LANGUAGE_CODE, the login screen will be displayed in the given language (if Django has appropriate translations).</p>
+        </section>
+
+        <section class="js-section">
+          <h3 class="section__title">Enter the admin site</h3>
+          <p> Now, try logging in with the superuser account you created in the previous step. You should see the Django admin index page:.</p>
+
+          <img src="https://docs.djangoproject.com/en/4.1/_images/admin02.png" alt="django">
+          <p>You should see a few types of editable content: groups and users. They are provided by django.contrib.auth, the authentication framework shipped by Django.</p>
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer">Documentation HTML For ToDoListApp</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../static/js/jvascript.js"></script>
+  </body>
+</html>
